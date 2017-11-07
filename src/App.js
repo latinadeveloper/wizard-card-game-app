@@ -1,6 +1,6 @@
-import { Navbar, Jumbotron, Button } from 'react-bootstrap'; // 
+import { Navbar, Jumbotron, Button } from 'react-bootstrap'; //
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import logo from './wizard.gif';
 import './App.css';
 
 class App extends Component {
