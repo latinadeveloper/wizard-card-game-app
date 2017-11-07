@@ -13,7 +13,6 @@ const PlayerCard = ({ player, removePlayer}) =>
       <div className="float-right">
         <div className="btn-group btn-group-sm" role="group" aria-label="Basic example">
 
-          </button>
           <button
             type="button"
             onClick={() => removePlayer(player.id)}
@@ -22,7 +21,7 @@ const PlayerCard = ({ player, removePlayer}) =>
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-      
+
       </div>
     </div>
   </div>;
