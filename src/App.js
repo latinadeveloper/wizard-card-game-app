@@ -1,6 +1,12 @@
 import { Navbar, Jumbotron, Button } from 'react-bootstrap'; //
 import React, { Component } from 'react';
 import logo from './wizard.png';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import NavBar from '../components/NavBar';
+import Home from '../components/Home';
+import Actors from '../components/Actors';
+import Tricks from '../components/Tricks';
+import Bids from '../components/Bids';
 import './App.css';
 
 class App extends Component {
