@@ -7,27 +7,18 @@ export class PlayerForm extends Component {
 
     constructor(props) {
       super(props)
-      this.state = {
-        content: '',
-        player: '',
-      }
+      this.state = ''
     }
 
     handleOnChange = event => {
       const { value, name } = event.target;
-      this.setState({
-        [name]: value
-      });
+      this.setState(value);
     }
 
     handleOnSubmit = event => {
       event.preventDefault();
-      const quote = Object.assign({}, this.state, { id: uuid() });
-      this.props.addPlayer(player);
-      this.setState({
-        content: '',
-        plauer: ''
-      });
+      this.props.addPlayer(this.state);
+      this.setState('');
     }
 
     render() {
@@ -39,24 +30,13 @@ export class PlayerForm extends Component {
                 <div className="panel-body">
                   <form className="form-horizontal" onSubmit={this.handleOnSubmit}>
                     <div className="form-group">
-                      <label htmlFor="content" className="col-md-4 control-label">Quote</label>
-                      <div className="col-md-5">
-                        <textarea
-                          className="form-control"
-                          name="content"
-                          value={this.state.content}
-                          onChange={this.handleOnChange}
-                        />
-                      </div>
-                    </div>
-                    <div className="form-group">
-                      <label htmlFor="player" className="col-md-4 control-label">Author</label>
+                      <label htmlFor="player" className="col-md-4 control-label">Player</label>
                       <div className="col-md-5">
                         <input
                           className="form-control"
                           type="text"
                           name="player"
-                          value={this.state.player}
+                          value={this.state}
                           onChange={this.handleOnChange}
                         />
                       </div>
