@@ -10,8 +10,7 @@ export default (state = [], action) => {
   case 'REMOVE_PLAYER':
     return state.filter(player => player.id !== action.playerId);
 
-    return state;
-
+  
   default:
     return state;
 }

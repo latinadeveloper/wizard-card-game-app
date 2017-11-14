@@ -1,13 +1,13 @@
 import { Navbar, Jumbotron, Button } from 'react-bootstrap'; //
 import React, { Component } from 'react';
 import logo from './wizard.png';
-import PlayerForm from './containers/PlayerForm';
+import Players from './containers/Players';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import Home from './components/Home';
 import Tricks from './components/Tricks';
 import Bids from './components/Bids';
-import './App.css';
+//import './App.css';
 
 class App extends Component {
   render() {
@@ -15,13 +15,19 @@ class App extends Component {
       <Router>
       <div className="container-fluid" style={{ paddingTop: '12px' }} >
         <header className="row title App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Wizard Card Game Score Keeper</h1>
-          
-          <NavBar />
+          <row>
+            <div className="col-md-6 col-md-offset-2">
+              {/*<img src={logo} className="App-logo" alt="logo" />*/}
+              </div>
+              <div className="col-md-6 col-md-offset-2">
+              
+            </div>
+            <NavBar />
+
+          </row>
         </header>
         <Route exact path="/" component={Home} />
-        <Route exact path="/players" component={PlayerForm} />
+        <Route exact path="/players" component={Players} />
       
       </div>
 

@@ -3,22 +3,23 @@ import uuid from 'uuid';
 import { connect } from 'react-redux';
 import { addPlayer } from '../actions/players';
 
+
 export class PlayerForm extends Component {
 
     constructor(props) {
       super(props)
-      this.state = ''
+      this.state = { name: '' }
     }
 
     handleOnChange = event => {
       const { value, name } = event.target;
-      this.setState(value);
+      this.setState({ name: value });
     }
 
     handleOnSubmit = event => {
       event.preventDefault();
       this.props.addPlayer(this.state);
-      this.setState('');
+      this.setState({ name: '' });
     }
 
     render() {
@@ -36,7 +37,7 @@ export class PlayerForm extends Component {
                           className="form-control"
                           type="text"
                           name="player"
-                          value={this.state}
+                          value={this.state.name}
                           onChange={this.handleOnChange}
                         />
                       </div>

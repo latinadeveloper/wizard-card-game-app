@@ -6,8 +6,7 @@ const PlayerCard = ({ player, removePlayer}) =>
     <div className="card card-inverse card-success card-primary mb-3 text-center">
       <div className="card-block">
         <blockquote className="card-blockquote">
-          <p>{player.content}</p>
-          <footer>-motto <cite title="Player's motto">{player.motto}</cite></footer>
+          <footer><cite title="Player's motto">{player}</cite></footer>
         </blockquote>
       </div>
       <div className="float-right">
