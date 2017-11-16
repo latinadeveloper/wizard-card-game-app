@@ -4,12 +4,17 @@ import { addPlayer, removePlayer } from '../actions/players';
 import PlayerForm from './PlayerForm';
 import PlayerCard from '../components/PlayerCard';
 
+const maximum_players = 6;
+
 class Players extends Component {
   render() {
     const { players, removePlayer} = this.props;
     return (
       <div>
-        <PlayerForm/>
+        {players.length < maximum_players &&
+          <PlayerForm/>
+        }
+        <div>Remaining: {maximum_players - players.length}</div>
         <hr />
         <div className="row justify-content-center">
           <h2>Players</h2>
