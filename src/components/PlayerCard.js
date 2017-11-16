@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PlayerCard = ({ player, removePlayer}) =>
+const PlayerCard = ({ id, player, removePlayer}) =>
 
 <div>
     <div className="card card-inverse card-success card-primary mb-3 text-center">
@@ -14,7 +14,7 @@ const PlayerCard = ({ player, removePlayer}) =>
 
           <button
             type="button"
-            onClick={() => removePlayer(player.id)}
+            onClick={() => removePlayer(id)}
             className="btn btn-danger"
           >
             <span aria-hidden="true">&times;</span>

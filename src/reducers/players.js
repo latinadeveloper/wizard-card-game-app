@@ -1,17 +1,12 @@
 export default (state = [], action) => {
-  let index;
-  let player;
-
   switch (action.type) {
-
-  case 'ADD_PlAYER':
+  case 'ADD_PLAYER':
     return state.concat(action.player);
 
   case 'REMOVE_PLAYER':
-    return state.filter(player => player.id !== action.playerId);
+    return state.filter((player, index) => index !== action.playerID);
 
-  
   default:
     return state;
-}
+  }
 }

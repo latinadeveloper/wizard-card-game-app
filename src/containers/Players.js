@@ -18,7 +18,7 @@ class Players extends Component {
         <div className="container">
           <div className="row">
             <div className="col-md-4">
-              {players.map(player => <PlayerCard key={player.id} removePlayer={removePlayer} player={player} />)}
+              {players.map((player, index) => <PlayerCard id={index} removePlayer={removePlayer} player={player} />)}
             </div>
           </div>
         </div>
