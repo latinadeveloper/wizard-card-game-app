@@ -3,7 +3,6 @@ import { NavLink } from 'react-router-dom';
 
 const NavBar = () => {
   return (
-    <row>
     <div className="navbar col-md-8 col-md-offset-2">
     LOGO  
       <NavLink to="/">Home</NavLink>
@@ -11,7 +10,7 @@ const NavBar = () => {
       <NavLink to="/tricks">Tricks</NavLink>
       <NavLink to="/actors">Score</NavLink>
     </div>
-    </row>
+
   );
 };
 
